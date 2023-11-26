@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  background-image: url("../images/bg.jpeg");
+  background-size: cover;
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+  font-size: 18px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo span {
+  font-size: 44px;
+  text-shadow: 0px 0px 30px #fff;
+  line-height: 34px;
+}
+
+.logo span:last-child {
+  font-size: 22px;
+  text-align: center;
+}
+.menu .nav ul {
+  display: flex;
+  column-gap: 20px;
+}
+.header__right .buy a {
+  position: relative;
+  background-color: #dd57ab;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.header__right .buy a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  opacity: 0;
+  background: linear-gradient(to right, #da67b2, #200261);
+  border: 0px solid #fff;
+  width: 0%;
+  height: 100%;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.header__right .buy a::after {
+  content: "Contact Me";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 46%;
+  left: 17%;
+  transform: translateY(-27%);
+}
+.header__right .buy a:hover::before {
+  width: 100%;
+  left: 0px;
+  border: 1px solid #fff;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.menu .nav ul a {
+  position: relative;
+}
+.menu .nav ul a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  transition: 0.2s all ease-in;
+}
+
+.menu .nav ul a:hover::before {
+  width: 100%;
+  transition: 0.2s all ease-in;
+}
+
+.main {
+  padding-top: 100px;
+  display: flex;
+}
+.main__left {
+  width: 50%;
+  padding-bottom: 60px;
+}
+.main__right {
+  width: 50%;
+}
+
+.main__left h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.main__title p {
+  font-size: 34px;
+  color: #cc5ab1;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.main__title p:last-child {
+  font-size: 34px;
+  color: #dbcfeb;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+.main__title p span {
+  position: relative;
+}
+.main__title p span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  left: -40px;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.main__right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.main__right_wrapper {
+  width: 400px;
+  height: 400px;
+  background-color: #5f2097;
+  border-radius: 50%;
+  animation: 80s infinite linear circle;
+  position: absolute;
+  top: 0px;
+  left: 15%;
+}
+.main__right_wrapper_img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: imgMove 16s linear infinite;
+}
+.main__right_wrapper_img img {
+  width: 50%;
+}
+@keyframes circle {
+  0% {
+    width: 400px;
+    height: 400px;
+    rotate: 0deg;
+  }
+  25% {
+    width: 500px;
+    height: 400px;
+    margin-top: -50px;
+    rotate: 1620deg;
+  }
+  50% {
+    width: 400px;
+    height: 500px;
+    margin-top: -70px;
+    rotate: 2620deg;
+  }
+  75% {
+    width: 500px;
+    height: 400px;
+    margin-top: -50px;
+    rotate: 1620deg;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    rotate: 0deg;
+  }
+}
+
+@keyframes imgMove {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.main__works {
+  padding: 150px 0px;
+}
+.main__works h2 {
+  font-size: 64px;
+  color: transparent;
+  cursor: pointer;
+  -webkit-text-stroke: 1px #fff;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "area", sans-serif;
+}
+.main__works h2:nth-child(1):after {
+  content: "Modernist";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cc5ab1;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main__works h2:nth-child(2):after {
+  content: "HTTP";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cc5ab1;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main__works h2:nth-child(3):after {
+  content: "Auto Sales";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cc5ab1;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main__works h2:nth-child(4):after {
+  content: "Crypto Vision";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cc5ab1;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main__works h2:nth-child(5):after {
+  content: "Space Game ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cc5ab1;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main__works h2:hover::after {
+  animation: moveText 0.6s linear both;
+}
+@keyframes moveText {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.main__works_name {
+  display: flex;
+}
+.main__works h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 64px;
+  margin-bottom: 100px;
+}
+.img__works img {
+  width: 100%;
+}
+.btn__works {
+  width: 40%;
+}
+.img__work {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.img__works_link {
+  position: relative;
+  border: 2px solid transparent;
+  transition: 0.3s all;
+}
+.img__works_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1;
+}
+.img__works_link span {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 22px;
+  z-index: 1;
+  transition: 0.3s all;
+}
+.img__works_link:hover {
+  border: 2px solid #fff;
+  transition: 0.3s all;
+}
+.img__works_link:hover span {
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+.img__works.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 1s all;
+}
+.img__works {
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  transition: 1s all;
+  opacity: 1;
+}
+.main__contact {
+  padding-bottom: 120px;
+}
+.main__contact h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 64px;
+  margin-bottom: 100px;
+}
+.main__contact_content {
+  display: flex;
+  justify-content: space-around;
+}
+.form h4 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+form input,
+textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #200261;
+  resize: none;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid transparent;
+}
+form input:focus,
+textarea:focus {
+  border: 1px solid #cc5ab1;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+form button {
+  position: relative;
+  background-color: #dd57ab;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  opacity: 0;
+  background: linear-gradient(to right, #da67b2, #200261);
+  border: 0px solid #fff;
+  width: 0%;
+  height: 100%;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+form button::after {
+  content: "Send";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-29%);
+}
+form button:hover::before {
+  width: 100%;
+  left: 0px;
+  border: 1px solid #fff;
+  opacity: 1;
+  transition: 0.2s;
+}
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.map img {
+ width: 100%;
+}
